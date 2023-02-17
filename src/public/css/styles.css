@@ -1,0 +1,18 @@
+/* body {
+    background-color: antiquewhite;
+} */
+
+footer{
+    background-color: red;
+}
+
+nav{
+    background-color: red;
+}
+
+.productsCardsContainer{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: 30px;
+}
