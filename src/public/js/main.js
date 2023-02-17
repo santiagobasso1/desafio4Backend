@@ -15,7 +15,9 @@ form.addEventListener("submit", (e)=>{
     socket.emit("addProduct", product) 
 })
 
-
+socket.on("mensajeProductoAgregado",mensaje=>{
+    console.log(mensaje)
+})
 
 socket.on("getProducts", products =>{
 
@@ -30,14 +32,13 @@ socket.on("getProducts", products =>{
             <h5 class="card-title">${product.title}</h5>
             <p class="card-text">${product.description} </p>
             <p class="card-text">Precio: ${product.price} </p>       
-            <p class="card-text">Stock: ${product.stock} </p>                         
+            <p class="card-text">Stock: ${product.stock} </p>   
+            <p class="card-text">Code: ${product.code} </p>                                               
             <a id="botonProducto${product.id}" class="btn btn-primary">Eliminar</a>
         </div>
         </div>`
-        socket.on("mensajeProductoAgregado",mensaje=>{
-            console.log(mensaje)
-        })
     });
+
 
     products.forEach(product=>{
         document.getElementById(`botonProducto${product.id}`).addEventListener("click",(e)=>{

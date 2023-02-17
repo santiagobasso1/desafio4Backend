@@ -59,7 +59,7 @@ export class ProductManager {
                         const idAutoincremental = aux[aux.length-1].id+1; //Esto para que sea incremental dependiendo del ultimo elemento
                         aux.push({ id: idAutoincremental, ...newProduct });
                         await fs.promises.writeFile(this.path, JSON.stringify(aux));
-                        return "Producto agregado"
+                        return "Producto Agregado"
                     }
                     else{
                         const idAutoincremental = 1;
