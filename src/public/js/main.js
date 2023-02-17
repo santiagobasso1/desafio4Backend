@@ -27,7 +27,7 @@ socket.on("getProducts", products =>{
         document.getElementById("productsCard").innerHTML+=  
         `
         <div class="card col-sm-2 cardProduct">
-        <img class="card-img-top" src="${product.thumbnail}" alt="Card image cap">
+        <img class="card-img-top imagenCardProducts" src="${product.thumbnail}" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">${product.title}</h5>
             <p class="card-text">${product.description} </p>
