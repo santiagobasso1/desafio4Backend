@@ -4,15 +4,39 @@
 
 footer{
     background-color: red;
+    display: flex;
+    justify-content: center;
 }
 
 nav{
     background-color: red;
+    display: flex;
+    justify-content: center;
 }
 
-.productsCardsContainer{
+/* .productsCardsContainer{
     display: flex;
     text-align: center;
     justify-content: center;
+} */
+body{
+    background-color: antiquewhite;
+
+}
+
+.formularioAddProduct{
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+/* .productsCardClass{
+    display: flex;
+    background-color: red;
+} */
+
+.cardProduct{
     margin: 30px;
 }

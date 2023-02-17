@@ -21,12 +21,12 @@ socket.on("mensajeProductoAgregado",mensaje=>{
 
 socket.on("getProducts", products =>{
 
-    document.getElementById("productCard").innerHTML=""
+    document.getElementById("productsCard").innerHTML=""
 
     products.forEach(product => {
-        document.getElementById("productCard").innerHTML+=  
-        `<div id="productCard">
-        <div class="card" style="width: 18rem;">
+        document.getElementById("productsCard").innerHTML+=  
+        `
+        <div class="card col-sm-2 cardProduct">
         <img class="card-img-top" src="${product.thumbnail}" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">${product.title}</h5>
@@ -36,7 +36,7 @@ socket.on("getProducts", products =>{
             <p class="card-text">Code: ${product.code} </p>                                               
             <a id="botonProducto${product.id}" class="btn btn-primary">Eliminar</a>
         </div>
-        </div>`
+        `
     });
 
 

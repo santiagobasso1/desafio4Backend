@@ -1,7 +1,6 @@
-<div class="productsCardsContainer">
+<div class="productsCardsContainer row">
 {{#each products}}
-        <div id="productCard">
-            <div class="card" style="width: 18rem;">
+            <div class="card col-sm-2 cardProduct">
             <img class="card-img-top" src="{{this.thumbnail}}" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">{{this.title}}</h5>

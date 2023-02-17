@@ -1,10 +1,8 @@
 {{>formRealTimeProducts}}
 
 <div class="productsCardsContainer">
-{{#each products}}
-        <div id="productCard">
+        <div id="productsCard" class="productsCardClass row">
         </div>
-{{/each}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.0/socket.io.js" integrity="sha512-rwu37NnL8piEGiFhe2c5j4GahN+gFsIn9k/0hkRY44iz0pc81tBNaUN56qF8X4fy+5pgAAgYi2C9FXdetne5sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/main.js"></script> {{!-- Están acá para que al conectarse con la ruta raiz no conecte con websockets, por como lo pide la consigna --}}
 
