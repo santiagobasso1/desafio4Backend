@@ -44,7 +44,7 @@ socket.on("getProducts", products =>{
         document.getElementById(`botonProducto${product.id}`).addEventListener("click",(e)=>{
             socket.emit("deleteProduct", product.id) 
             socket.on("mensajeProductoEliminado",mensaje=>{
-                console.log(mensaje)
+                console.log(mensaje) //Para mostrarle al cliente el mensaje
             })
         })
     })

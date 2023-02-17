@@ -33,14 +33,16 @@ io.on("connection", async(socket)=>{
 
   socket.on("addProduct", async info =>{ //El socket "on" es cuando se recibe información del lado del cliente
     const newProduct = {...info, status:true };
-    socket.emit("mensajeProductoAgregado",await productManager.addProduct(newProduct))
+    var mensajeAgregar = await productManager.addProduct(newProduct); //Agregar un producto y guarda el mensaje en un variable para mandarlo al usuario y mostrarlo al servidor
+    socket.emit("mensajeProductoAgregado",mensajeAgregar)
+    console.log(mensajeAgregar)
   })
   socket.on("deleteProduct", async id=>{
-    
-    socket.emit("mensajeProductoEliminado",await productManager.deleteProductById(id))
+    var mensajeBorrar = await productManager.deleteProductById(id)
+    socket.emit("mensajeProductoEliminado",mensajeBorrar)
+    console.log(mensajeBorrar) //Para mostrar al servidor el mensaje
   })
   socket.emit("getProducts",  await productManager.getAllProducts()); //Envia los productos del carrito al cliente
-
 })
 
 
